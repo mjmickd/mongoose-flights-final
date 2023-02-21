@@ -1,0 +1,29 @@
+<%- include('../partials/header') %>
+
+  
+
+<h1>All Flights</h1>
+<div class="flight-index">
+  <ul>
+    <li><h3>Airline</h3></li>
+    <li><h3>Airport</h3></li>
+    <li><h3>Flight Number</h3></li>
+    <li><h3>Departs</h3></li>
+   
+  </ul>
+  <br>
+  <br>
+  
+  <% flights.forEach(f => { %>
+    <ul>
+      <li><%= f.airline %></li>
+      <li><%= f.airport %></li>
+      <li><%= f.flightNo %></li>
+      <li><%= f.departs%></li>
+      <li class="detail"><a href="/flights/<%= f.id %>">Details</a></li>
+    </ul>
+  <% }) %>
+</div>
+
+
+<%- include('../partials/footer') %>
